@@ -1053,8 +1053,7 @@
   projectId: "media-54712",
   storageBucket: "media-54712.firebasestorage.app",
   messagingSenderId: "754622637515",
-  appId: "1:754622637515:web:6cacb74bbce5036121424e",
-  measurementId: "G-WMC1HSYKD9"
+  appId: "1:754622637515:web:6cacb74bbce5036121424e"
         };
 
         // Initialize Firebase
@@ -1181,14 +1180,14 @@
         }
 
         async function addMember(data) {
-            await db.collection('members').add(data);
+            await db.collection('members').doc(membersId).add(membersData);
             showNotification('Member added successfully!', 'success');
             await loadMembers();
             await loadDashboard();
         }
 
         async function updateMember(id, data) {
-            await db.collection('members').doc(id).update(data);
+            await db.collection('members').doc(membersId).update(membersData);
             showNotification('Member updated successfully!', 'success');
             await loadMembers();
             await loadDashboard();
@@ -1196,7 +1195,7 @@
 
         async function deleteMember(id) {
             if (confirm('Are you sure you want to delete this member?')) {
-                await db.collection('members').doc(id).delete();
+                await db.collection('members').doc(membersId).delete(membersData);
                 showNotification('Member deleted successfully!', 'success');
                 await loadMembers();
                 await loadDashboard();

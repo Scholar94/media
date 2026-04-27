@@ -5,29 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAC Good Works | Technical & Media Unit</title>
     <!-- Firebase SDKs -->
-   <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAv_4jC5rP71JwH4qPQ5ob2BANQq0AX31w",
-    authDomain: "media-54712.firebaseapp.com",
-    projectId: "media-54712",
-    storageBucket: "media-54712.firebasestorage.app",
-    messagingSenderId: "754622637515",
-    appId: "1:754622637515:web:6cacb74bbce5036121424e",
-    measurementId: "G-WMC1HSYKD9"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
     <style>
         * {
             margin: 0;
@@ -1067,7 +1047,16 @@
     <script>
         // ============ FIREBASE CONFIGURATION ============
         // REPLACE WITH YOUR FIREBASE CONFIGURATION
-       
+        const firebaseConfig = {
+            apiKey: "AIzaSyAv_4jC5rP71JwH4qPQ5ob2BANQq0AX31w",
+  authDomain: "media-54712.firebaseapp.com",
+  projectId: "media-54712",
+  storageBucket: "media-54712.firebasestorage.app",
+  messagingSenderId: "754622637515",
+  appId: "1:754622637515:web:6cacb74bbce5036121424e",
+  measurementId: "G-WMC1HSYKD9"
+        };
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
